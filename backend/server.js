@@ -4,7 +4,7 @@ const userModel=require('./userModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const app=express();
-const PORT=3000;
+const PORT=process.env.PORT || 3000;
 
 const mongoUrl='mongodb+srv://nodejs_assignment:nodejs_assignment@cluster0.fjz6s9v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 mongoose.connect(mongoUrl).then(()=>console.log("DB connected"))
